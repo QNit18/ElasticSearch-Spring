@@ -1,0 +1,147 @@
+{
+	"info": {
+		"_postman_id": "a1fa925b-18ce-4881-9a25-9f2bbd008c47",
+		"name": "ElasticSearch",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29118791"
+	},
+	"item": [
+		{
+			"name": "Get Info",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/info",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"info"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Info by Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/info/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"info",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Info by Id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/info/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"info",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Info by name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/info/find/bun bo viet nam-new update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"info",
+						"find",
+						"bun bo viet nam-new update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Insert document(data)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\" : 2,\r\n    \"name\": \"bun bo viet nam\",\r\n    \"address\": \"Ha Noi, Viet Nam\",\r\n    \"age\" : 21,\r\n    \"accounts\": [\r\n        {\r\n            \"username\" : \"bundau-1\",\r\n            \"password\" : \"12345678\",\r\n            \"isActive\": true\r\n        },\r\n        {\r\n            \"username\" : \"bundau-2\",\r\n            \"password\" : \"12345678\",\r\n            \"isActive\": false\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/info",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"info"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update document(data)",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"bun bo viet nam-new update\",\r\n    \"address\": \"Ha Noi, Viet Nam\",\r\n    \"age\" : 21,\r\n    \"accounts\": [\r\n        {\r\n            \"username\" : \"bundau-1\",\r\n            \"password\" : \"12345678\",\r\n            \"isActive\": true\r\n        },\r\n        {\r\n            \"username\" : \"bundau-2\",\r\n            \"password\" : \"12345678\",\r\n            \"isActive\": false\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/info/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"info",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
